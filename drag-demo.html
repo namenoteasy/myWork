@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+<script src="scripts/changespeed.js"></script>
+    <style>
+        div{
+            box-sizing: border-box;
+            position:absolute;
+            width:100px;height:100px;
+            padding:0;margin:0;
+            text-align: center;
+            font:bold 12px/100px arial;
+            color:white;
+            background: radial-gradient(closest-side,lightskyblue,yellowgreen,white);
+            border-radius:100px;
+        }
+        div span{
+            display: block;
+        }
+        @keyframes rotation {
+            to{transform: rotate(360deg);}
+        }
+        @keyframes lastRotate {
+            to{transform:rotate(160deg);}
+        }
+    </style>
+</head>
+<body>
+<div id="box"><span>弹弹球</span></div>
+<script>
+    window.onload=function(){
+        dragThrow("box");
+        function dragThrow(id) {
+            var box=document.getElementById(id);
+            var iSpeedX,iSpeedY;
+            toDrag(box);
+            rangeSpeed(box);
+        }
+    }
+
+
+</script>
+</body>
+</html>
