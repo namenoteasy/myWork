@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        position: relative;
+        width:300px;
+        height:200px;
+        overflow: hidden;
+    }
+    ul{
+        position:absolute;
+        width:1500px;
+        margin:0;padding:0;
+        overflow:hidden;
+        border: 1px solid #666666;
+        list-style:none;
+    }
+    ul li{
+        float:left;
+        width:300px;
+        height:200px;
+    }
+    li:nth-child(1){
+        background-color:red;
+    }
+    li:nth-child(2){background-color:blue;}
+    li:nth-child(3){background-color:yellow;}
+    li:nth-child(4){background-color:green;}
+    li:nth-child(5){background-color:orange;}
+    img{
+        width:100%;
+        height:auto;
+    }
+</style>
+<body>
+<input type="button" class="prev_div" value="左轮播"/>
+<input type="button" class="next_div" value="右轮播"/>
+<div id="pic-win">
+    <ul id="pic-wr">
+        <li><img src="img/car1.jpg"/></li>
+        <li><img src="img/car2.jpg"/></li>
+        <li><img src="img/car3.jpg"/></li>
+        <li><img src="img/car4.jpg"/></li>
+        <li><img src="img/car5.jpg"/></li>
+    </ul>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<input type="button" class="preview" value="1"/>
+<input type="button" class="preview" value="2"/>
+<input type="button" class="preview" value="3"/>
+<input type="button" class="preview" value="4"/>
+<input type="button" class="preview" value="5"/>
+<script src="js/jquery-1.12.3.min.js" value="1"></script>
+<script src="js/move2.js"></script>
+<script src="js/lunbo3.js"></script>
+
+</body>
+</html>
