@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border: 1px solid #666666;
+        }
+        div.small{
+            display: inline-block;
+            overflow: hidden;
+            position: absolute;
+            top:15px;
+            width:300px;
+            height: 300px;;
+        }
+        div.big{
+            display: none;
+            left:320px;
+            top:15px;
+            position: absolute;
+            overflow: hidden;
+            width:500px;
+            height:500px;
+        }
+        #glass{
+            display: none;
+            position: absolute;
+            width:50px;
+            height:50px;
+            background-color: #f0f0f0;
+            z-index: 2;
+            opacity: 0.4;
+            cursor:pointer;
+        }
+        div.small img{
+            position: absolute;
+            display:block;
+            width:300px;
+            height: auto;
+        }
+        div.big img{
+            position: absolute;
+            display:block;
+            width:900px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="small"><div id="glass"></div><img src="img/paris.jpg" alt="巴黎"/></div>
+<div class="big"><img src="img/paris.jpg" alt="巴黎"/></div>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script>
+    $(function () {
+        var small=$("div.small");
+        var big=$("div.big");
+        var gla=$("#glass");
+        var bigImg=$("div.big img");
+        gla.mouseover(function () {
+           $(document).bind("contextmenu",function (ev) {
+               ev.preventDefault();
+               console.log(ev);
+               if(ev.button){
+                   bigImg.width(function (i,w) {
+                       console.log(w);
+                       return w/1.2;
+                   }).height(function (i,h) {
+                       return h/1.2;
+                   });
+               }
+           });
+        }).click(function (ev) {
+            if(ev.button==0){
+                bigImg.width(function (i,w) {
+                    console.log(w);
+                    return w*1.2;
+                }).height(function (i,h) {
+                    return h*1.2;
+                });
+            }
+        });
+        small.hover(function () {
+            big.show();
+            gla.show();
+        },
+        function () {
+            big.hide();
+            gla.hide();
+        }).mousemove(function (ev) {
+            var disX=ev.clientX-small[0].offsetLeft;
+            var disY=ev.clientY-small[0].offsetTop;
+            var l=disX-gla.width()/2;
+            var t=disY-gla.width()/2;
+            if(l<0){
+                l=0;
+            }else if(l>(small.width()-gla.width())){
+                l=small.width()-gla.width();
+            }
+            if(t<0){
+                t=0;
+            }else if(t>small.height()-gla.height()){
+                t=small.height()-gla.height();
+            }
+            var percX=l/(small.width()-gla.width());
+            var percY=t/(small.height()-gla.height());
+            gla[0].style.left=l+"px";
+            gla[0].style.top=t+"px";
+            bigImg[0].style.left=-(bigImg.width()-big.width())*percX+"px";
+            bigImg[0].style.top=-(bigImg.height()-big.height())*percY+"px";
+        });
+
+    })
+</script>
+</body>
+</html>
