@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>跨域通信实例</h1>
+<iframe src="frame.html" width="320" height="180" onload="hello()"></iframe>
+<script>
+    window.addEventListener("message",function(ev){
+        if(ev.origin==""){                //为了安全，最好检查是否是指定窗口发来的消息
+            alert("从"+ev.origin+"那里传来的消息\n\""+ev.data+"\"");
+        }
+
+    },false)
+    function  hello() {
+        var frame=window.frames[0];
+        frame.postMessage("你好","*");
+    }
+</script>
+</body>
+</html>

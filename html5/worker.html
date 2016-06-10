@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>从随机生成的数字中抽取3的倍数并显示</h1>
+<table id="table"></table>
+<script>
+    var worker1=new Worker("js/worker1.js");
+    var worker2=new Worker("js/worker2.js");
+    worker1.postMessage("");
+    worker1.onmessage=function(ev) {
+        worker2.postMessage(ev.data);
+    };
+    worker2.onmessage=function(ev){
+        if(ev.data!=""){
+            var j,
+                k,
+                tr,
+                td,
+                intArray=ev.data.split(";"),
+                table=document.getElementById("table");
+            for(var i=0;i<intArray.length;i++){
+                j=parseInt(i/10,0);
+                k=i%10;
+                if(k==0){
+                    tr=document.createElement("tr");
+                    tr.id="tr"+j;
+                    table.appendChild(tr)
+                }
+                else{
+                    tr=document.getElementById("tr"+j);
+                }
+                td=document.createElement("td");
+                tr.appendChild(td);
+                td.innerHTML=intArray[i];
+                td.style.backgroundColor="blue";
+                td.style.color="white";
+                td.width="30";
+            }
+        }
+    };
+
+</script>
+</body>
+</html>

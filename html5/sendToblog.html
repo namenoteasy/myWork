@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            position: absolute;
+            display: none;
+            width: 44px;
+            height:36px;
+            z-index: 2;
+            background: url(img/sina.png) 0 0 no-repeat;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+<p id="p1"> 微信6.0之后，原有的WeixinJSBridge.on('menu:share:timeline', function (argv) {}不再可以使用，但是微信提供的新的方法 JS-SDK, 官方接口请参见 微信JSSDK说明文档 ，具体的方法官方文档都说的比较清楚了，本文只是记录下开发过程中遇到的问题以及解决方式。
+    1. 虽然微信提供了JSSDK，但是这不意味着你可以用自定义的按钮来直接打开微信的分享界面，这套JSSDK只是把微信分享接口的内容定义好了，实际还是需要用户点击右上角的菜单按钮进行主动的分享，用户点开分享界面之后，出现的内容就会是你定义的分享标题、图片和链接。
+    2. wx.config()注入配置成功之后，会触发wx.ready()函数（同样失败的时候会触发wx.error()函数），所以之后的有必要的接口调用，比如定义分享到朋友圈、分享给好友的内容，还是放在wx.ready()中进行调用以保证正确性。
+    3.wx.checkJsApi无需wx.config即可调用，用来判断当前客户端是否能支持微信JSSDK的接口。
+    4.分享出去的链接，会被微信在链接后面追加参数。这个问题十分重要，本人在开发过程中，第一次分享出去，成功没有任何问题，但是再次打开链接，会提示invalid signature，也就是签名错误，这个问题出现的原因，就是因为原来链接的被追加了参数，传递到自己服务器后台的页面原地址和提交给微信的页面原地址不匹配，解决方法如下：</p>
+<div id="div1" title="发送至新浪微博"></div>
+<div class="bdsharebuttonbox" data-tag="share_1">
+    <a class="bds_mshare" data-cmd="mshare"></a>
+    <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+    <a class="bds_tsina" data-cmd="tsina"></a>
+    <a class="bds_baidu" data-cmd="baidu"></a>
+    <a class="bds_renren" data-cmd="renren"></a>
+    <a class="bds_tqq" data-cmd="tqq"></a>
+    <a class="bds_more" data-cmd="more">更多</a>
+    <a class="bds_count" data-cmd="count"></a>
+</div>
+<script>
+    window._bd_share_config = {
+        common : {
+            bdText : '自定义分享内容',
+            bdDesc : '自定义分享摘要',
+            bdUrl : '自定义分享url地址',
+            bdPic : '自定义分享图片'
+        },
+        share : [{
+            "bdSize" : 16
+        }],
+        slide : [{
+            bdImg : 0,
+            bdPos : "right",
+            bdTop : 100
+        }],
+        image : [{
+            viewType : 'list',
+            viewPos : 'top',
+            viewColor : 'black',
+            viewSize : '16',
+            viewList : ['qzone','tsina','huaban','tqq','renren']
+        }],
+        selectShare : [{
+            "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
+        }]
+    }
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</body>
+</html>

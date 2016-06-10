@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    window.addEventListener("message",function(ev){
+
+        ev.source.postMessage("你好，这里是"+this.location,ev.origin);
+    },false)
+
+</script>
+</body>
+</html>
