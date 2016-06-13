@@ -1,0 +1,13 @@
+.float-anchor{
+    font: 14px/16px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+    color:#555;
+    text-align: left;
+    vertical-align: top;
+    border-right:  1px solid #e5e7e6;
+}
+.float-anchor-s{
+    font: 12px/16px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+    color:#929aa5;
+    text-align: left;
+    vertical-align: top;
+}

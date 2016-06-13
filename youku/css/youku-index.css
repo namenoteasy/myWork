@@ -1,0 +1,233 @@
+body{
+    min-width: 1200px;
+    max-width: 1440px;
+    color: #000;
+    font: 12px/20px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+    background-color: #fff;
+    text-align: left;
+}
+a{
+    text-decoration: none;
+    color:#555;
+}
+a:hover{
+    color:red;
+}
+#head a{
+    display:inline-block;
+}
+#head-wr{
+    position: fixed;
+    top:0;
+    left:0;right:0;
+    background-color: #fff;
+
+    z-index:100;
+}
+.head{
+    position: relative;
+    height:60px;
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-top:21px;
+    max-width: 1440px;
+    min-width:1200px;
+    font-size: 13px;
+    border-bottom: 1px solid #e5e7e6;
+    overflow: hidden;
+}
+.h-logo{
+    float:left;
+    margin-left:53px;
+    width:108px;
+    height: 46px;
+    background: url(../img/youku-logo.png) no-repeat;
+}
+.h-nav{
+    float:left;
+    margin-left:94px;
+    border-radius: 1px;
+    border:1px solid #2fb3fe;
+    text-align: center;
+    font: 13px/38px "Microsoft YaHei";
+}
+.nav-anchor{
+    color:#2fb3fe;
+}
+.h-nav li{
+    float:left;
+    height:38px;
+    width:62px;
+    border-left: 1px solid #2fb3fe;
+}
+.h-nav li:first-child{
+    background-color: #2fb3fe;
+    border-left:0;
+}
+.h-nav li:first-child a{
+    color:white;
+}
+.h-personal{
+    float:left;
+    height: 39px;
+    width: 226px;
+    padding-top: 12px;
+    margin-left:39px;
+    text-align: left;
+    font: 13px "Microsoft YaHei";
+}
+a.per1{
+    width:49px;
+}
+.per2{
+    display: inline-block;
+    overflow: hidden;
+    padding-left: 20px;
+}
+.per2 a{
+    position: relative;
+    float:left;
+    margin-left:20px;
+    height: 16px;
+    width:35px;
+}
+.p-arrow{
+    position: absolute;
+    top:6px;
+    display: block;
+    left:16px;
+    width: 9px;
+    height: 5px;
+    background: url(../img/youku-per-5.png) no-repeat;
+}
+.h-personal span{
+    margin-left: 7px;
+    text-align: left;
+    line-height: 16px;
+    vertical-align: top;
+    color: #3f3f40;
+}
+.p-icon{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/youku-per-2.png) no-repeat;
+}
+.h-personal i.p-icon1{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/youku-per-2.png) no-repeat;
+}
+.h-personal i.p-icon2{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/youku-per-3.png) no-repeat;
+}
+.h-personal i.p-icon3{
+    display: inline-block;
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/youku-per-4.png) no-repeat;
+}
+.h-personal i.p-icon4{
+    display: inline-block;
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/youku-per-1.png) no-repeat;
+}
+.h-personal a:first-child{
+    margin-left: 0;
+}
+.h-search{
+    float:right;
+    position: absolute;
+    right:0;
+    margin-right: 10px;
+    border-radius: 1px;
+    border:1px solid #2fb3fe;
+}
+.h-search .s-ipt{
+    position: relative;
+    float:left;
+    width: 370px;
+    height: 38px;
+}
+.h-search .s-sub{
+    float:left;
+    width: 80px;
+    height: 38px;
+}
+.ipt-inner{
+    display: inline-block;
+    width:295px;
+    height:20px;
+    margin-left:37px;
+    margin-top:10px;
+    border:0;
+    outline:0;
+}
+.sub-inner{
+    display: block;
+    width: 100%;
+    height:100%;
+    border:0;
+    outline:0;
+    background-color: #31a4ff;
+    color:white;
+    font-weight: bold;
+}
+.innerL-icon{
+    display: block;
+    position: absolute;
+    width:16px;height:16px;
+    top:10px;left:10px;
+    background: url(../img/youku-search.png) no-repeat;
+}
+.innerR-a{
+    display: block;
+    position: absolute;
+    width:16px;
+    height:20px;
+    right:10px;top:10px;
+    background: url(../img/youku-R.png) no-repeat;
+}
+#nav-layer{
+    min-width: 100%;
+    border-bottom: 1px solid #e5e7e6;
+    background-color: #fff;
+}
+.layer-list{
+    height:52px;
+    padding-left: 19.5px;
+    overflow: hidden;
+    font: 14px/52px "Microsoft YaHei";
+    color:#555;
+}
+.layer-list a:first-child{
+    display:inline-block;
+    height:50px;
+    color:#2fb3fe;
+    border-bottom: 2px solid #2fb3fe;
+}
+.layer-list a{
+    padding:0 5px;
+    margin-right: 5px;
+}
+.l-download{
+    margin-left:95px;
+}
+.layer-nav-more{
+    display: inline-block;
+    position: relative;
+    height: 52px;
+    width: 45px;
+    text-align: left;
+}
+.layer-nav-more .p-arrow{
+    left:31px;
+    top:25px;
+}

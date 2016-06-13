@@ -1,0 +1,185 @@
+#content{
+    position: relative;
+    padding-top: 156px;
+    min-width: 1200px;
+    max-width: 1440px;
+    overflow: hidden;
+    padding-bottom: 181px;
+    background: url("../img/youku-car.png") left 370px bottom 0px no-repeat;
+    background-color: #f0f1f3;
+}
+.main-block{
+    width: 1320px;
+    margin:0 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.main-block .block-p{
+    float:left;
+    width:440px;
+}
+.block-p div{
+    float:left;
+    margin: 10px;
+}
+.float-right div{
+    float:right;
+}
+.block-title{
+    position: relative;
+    margin: 10px;
+    padding-bottom: 10px;
+    font-weight:  400;
+    line-height: 24px;
+    font-size: 20px;
+    text-indent: 41px;
+    border-bottom: 1px solid #e5e7e6;
+}
+.title-icon{
+    display: block;
+    position: absolute;
+    width:30px;
+    height:24px;
+    background: url(../img/youku-icon_diamon.png) no-repeat;
+}
+.head-line-large{
+    color: #555;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+}
+.head-line-small{
+    font: 13px/25px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+    color:#929aa5;
+    font-weight: 400;
+}
+.condition1{
+    margin-left: 690px;
+}
+.condition2{
+    margin-left: 10px;
+}
+.advisement{
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    width:48px;
+    height:20px;
+    background: url(../img/guanggao.png) no-repeat;
+}
+.inner-content{
+    width: 1320px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.inner-content div{
+    width: 200px;
+    float: left;
+    margin:10px;
+}
+.p-defined{
+    display: block;
+    padding-top: 8px;
+    font: 13px/18px "Microsoft YaHei";
+    color:#555;
+    text-align: left;
+}
+.p-def-two{
+    height:40px;
+}
+.p-describe{
+    font: 12px/14px "Microsoft YaHei";
+    color:#929aa5;
+    text-align: left;
+}
+.blue-link{
+    color:#2fb3fe;
+}
+.under-describe li{
+    padding-top: 4px;
+}
+div.long-banner{
+    width: 1300px;
+    height: 100px;
+    margin: 10px 10px;
+}
+div.block-p2{
+    float:left;
+    width:1100px;
+    margin:0;
+}
+.block-p2 div{
+    float:left;
+}
+div.youku-product{
+    float:left;
+    margin-top:4px;
+}
+.product-list{
+    width: 200px;
+    height:320px;
+}
+.product-list li{
+    position: relative;
+    overflow: hidden;
+    word-spacing: 0;
+}
+.product-icon{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    background: url("../img/side-icon.png") no-repeat;
+}
+.justify-anchor{
+    width: 170px;
+    margin-left: 30px;
+    padding: 11px 0;
+    border-bottom:  1px solid #e5e7e6;
+}
+.justify-anchor .float-anchor-s{
+    margin-left: 7px;
+}
+.justify-anchor .float-anchor{
+    padding-right: 9px;
+}
+.pro-icon-2{
+    background-position: -26px 0;
+}
+.pro-icon-3{
+    background-position: -52px 3px;
+}
+.pro-icon-4{
+    background-position: 0 0;
+}
+.pro-icon-5{
+    background-position: -130px 0;
+}
+.pro-icon-6{
+    background-position: -78px 0;
+}
+.pro-icon-7{
+    background-position: -104px 0;
+}
+.bottom-word{
+    display:inline-block;
+    position: absolute;
+    bottom: 60px;
+    left:770px;
+    font: 12px/24px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+    color:#2fb3fe;
+}
+.bottom-word a{
+    display: inline-block;
+    margin:0 7px;
+    padding: 0 10px;
+    background-color: #2fb3fe;
+    color:#fff;
+    border-radius:2px;
+}
+

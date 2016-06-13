@@ -1,0 +1,75 @@
+#foot-wr{
+    padding: 10px 25px;
+    padding-right: 0;
+    background-color: #f1f2f4;
+    border-top:1px solid #e5e7e6;
+    font: 12px/24px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+}
+.ft{
+    padding: 20px 0;
+    overflow: hidden;
+}
+hr{
+    border:0;
+    border-bottom: 1px solid #e3e7e8;
+}
+ dl.list1{
+    float:left;
+    width: 440px;
+}
+dl.list2{
+    float:left;
+    width: 220px;
+}
+dl.list3{
+    float:left;
+    width: 200px;
+}
+.ft a{
+    margin-right: 10px;
+}
+.weixin-code{
+    display:block;
+    width: 200px;
+    height: 93px;
+    background: url("../img/youku-icon(9).png") no-repeat, url("../img/youku-icon(10).png") 84px 0 no-repeat;
+}
+.context{
+    padding: 0;
+    font: 12px/13px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+    text-align: center;
+}
+.context-anchor{
+    position: relative;
+    display: inline-block;
+    height: 26px;
+    margin-right: 45px;
+}
+.context-icon{
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("../img/context-icon.png") no-repeat;
+}
+.context-anchor dl{
+    margin-left: 36px;
+}
+.con-icon2{
+    background-position: -26px 0;
+}
+.con-icon3{
+    background-position: -57px 0;
+}
+.con-icon4{
+    background-position: -87px 0;
+}
+.con-icon5{
+    background-position: -115px 0;
+}
+.con-icon6{
+    background-position: -142px 0;
+}
+.con-icon7{
+    background-position: -26px 0;
+}
